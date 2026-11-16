@@ -24,7 +24,7 @@ function providerConfig() {
   }
   if (provider==='codex') {
     const model=process.env.AURORA_CODEX_MODEL;
-    const command=process.env.AURORA_CODEX_BIN??'codex';
+    const command=process.env.AURORA_CODEX_BIN||'codex';
     const enabled=process.env.AURORA_SIMULATIONS==='1'&&(process.env.AURORA_HOST??'127.0.0.1')==='127.0.0.1';
     return {name:'codex_exec',model,call:enabled&&model?(prompt,format)=>callCodex({command,model,prompt,format}):null};
   }

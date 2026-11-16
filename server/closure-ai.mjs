@@ -37,7 +37,7 @@ export async function generateClosureAdvice(pool,actor,caseId) {
   },{readOnly:true});
   const demo=process.env.AURORA_AI_PROVIDER==='demo';
   const model=demo?demoModel:process.env.AURORA_CODEX_MODEL;
-  const command=process.env.AURORA_CODEX_BIN??'codex';
+  const command=process.env.AURORA_CODEX_BIN||'codex';
   if (!demo&&(process.env.AURORA_AI_PROVIDER!=='codex'||!model)) {
     return {status:'AI_NOT_CONFIGURED',message:'AI 연결을 확인해 주세요. 증빙을 확인하고 수동으로 검토안을 작성할 수 있습니다.'};
   }
