@@ -1,0 +1,72 @@
+[
+  {
+    "code": "MICROBIAL",
+    "type": "오염 검사 이상",
+    "title": "가상 유형 · 오염 검사 이상",
+    "fact": "공개 데모용으로 구성한 가상 오염 검사 이상 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "LABEL",
+    "type": "표시 누락",
+    "title": "가상 유형 · 표시 누락",
+    "fact": "공개 데모용으로 구성한 가상 표시 누락 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "SEAL",
+    "type": "밀봉 불량",
+    "title": "가상 유형 · 밀봉 불량",
+    "fact": "공개 데모용으로 구성한 가상 밀봉 불량 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "TEMPERATURE",
+    "type": "온도 이탈",
+    "title": "가상 유형 · 온도 이탈",
+    "fact": "공개 데모용으로 구성한 가상 온도 이탈 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "FOREIGN_MATERIAL",
+    "type": "이물 의심",
+    "title": "가상 유형 · 이물 의심",
+    "fact": "공개 데모용으로 구성한 가상 이물 의심 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "EXPIRY",
+    "type": "사용기한 오류",
+    "title": "가상 유형 · 사용기한 오류",
+    "fact": "공개 데모용으로 구성한 가상 사용기한 오류 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "TRACE",
+    "type": "출하 추적 공백",
+    "title": "가상 유형 · 출하 추적 공백",
+    "fact": "공개 데모용으로 구성한 가상 출하 추적 공백 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "FILL",
+    "type": "충전 편차",
+    "title": "가상 유형 · 충전 편차",
+    "fact": "공개 데모용으로 구성한 가상 충전 편차 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "PACK_MIXUP",
+    "type": "포장 혼입",
+    "title": "가상 유형 · 포장 혼입",
+    "fact": "공개 데모용으로 구성한 가상 포장 혼입 기록입니다.",
+    "kind": "SYNTHETIC"
+  },
+  {
+    "code": "RECALL_BLOCK",
+    "type": "회수 배치 차단",
+    "title": "가상 유형 · 회수 배치 차단",
+    "fact": "공개 데모용으로 구성한 가상 회수 배치 차단 기록입니다.",
+    "kind": "SYNTHETIC"
+  }
+]

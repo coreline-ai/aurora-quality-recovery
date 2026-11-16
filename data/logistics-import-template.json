@@ -1,0 +1,46 @@
+{
+  "companyId": "",
+  "verifiedBy": "",
+  "verificationRef": "",
+  "evidence": [
+    {"ref":"","file":"","sha256":""}
+  ],
+  "cases": [
+    {
+      "id": "",
+      "revision": 1,
+      "classification": "VERIFIED_OPERATION",
+      "category": "",
+      "issue": "QUALITY_REPLACEMENT",
+      "product": "",
+      "line": "",
+      "batch": "",
+      "title": "",
+      "trigger": "",
+      "affectedQty": null,
+      "action": "",
+      "prevention": "",
+      "customer": "",
+      "destination": "",
+      "occurredAt": null,
+      "originalPromise": null,
+      "amendedPromise": null,
+      "quantity": null,
+      "legs": [
+        {"site":"","role":"QUARANTINE","batch":"","qty":null,"shippedQty":0,"deliveredQty":0,"shipAt":null,"deliveredAt":null,"receipt":null,"evidenceRef":""}
+      ],
+      "approvals": [
+        {"role":"","decision":"","at":null,"ref":""}
+      ],
+      "costs": {"replacement":null,"freight":null,"disposal":null,"compensation":null,"rework":null},
+      "costRef": "",
+      "qualityRef": "",
+      "closureRef": "",
+      "outcome": "",
+      "deliveredQty": null,
+      "deliveredAt": null,
+      "closedAt": null,
+      "recordedAt": null
+    }
+  ]
+}

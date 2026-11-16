@@ -1,0 +1,43 @@
+{
+  "version": "warehouse-demo@1",
+  "classification": "SIMULATED_EVENT",
+  "asOf": "2026-07-01T09:00:00+09:00",
+  "product": "PL-02",
+  "affectedBatch": "DEMO-BATCH-01",
+  "issue": "QUALITY_REPLACEMENT",
+  "warehouses": [
+    {"id":"F1","name":"데모 제조사 F1 창고","batch":"DEMO-PL02-F1","onHand":2600,"reserved":500,"qualityHold":300,"released":true,"shipAt":"2026-07-03T13:00:00+09:00","arriveAt":"2026-07-06T10:00:00+09:00","freightKrw":320000},
+    {"id":"INCHEON","name":"데모 제조사 인천 물류센터","batch":"DEMO-PL02-IC","onHand":1500,"reserved":900,"qualityHold":200,"released":true,"shipAt":"2026-07-03T14:30:00+09:00","arriveAt":"2026-07-06T11:45:00+09:00","freightKrw":230000},
+    {"id":"GIMPO","name":"데모 제조사 김포 물류센터","batch":"DEMO-PL02-GP","onHand":2400,"reserved":200,"qualityHold":200,"released":true,"shipAt":"2026-07-03T14:00:00+09:00","arriveAt":"2026-07-06T11:30:00+09:00","freightKrw":690000},
+    {"id":"F1-HOLD","name":"데모 제조사 F1 격리구역","batch":"DEMO-BATCH-01","onHand":3200,"reserved":0,"qualityHold":3200,"released":false}
+  ],
+  "history": [
+    {
+      "id":"DEMO-HIST-001","title":"단일 창고 출고로 변경 약속 준수","issue":"QUALITY_REPLACEMENT","product":"PL-02","mode":"SINGLE",
+      "quantity":1200,"customer":"시험 고객 가","from":"데모 제조사 F1 창고","to":"시험 고객 가 물류센터",
+      "originalPromise":"2026-06-15T12:00:00+09:00","amendedPromise":"2026-06-16T12:00:00+09:00",
+      "approvals":[{"role":"품질위원회","decision":"회수 착수 승인","at":"2026-06-12T10:00:00+09:00"},{"role":"영업","decision":"고객 변경 납기 동의 기록","at":"2026-06-12T14:00:00+09:00"},{"role":"품질·물류","decision":"대체 배치 합격 확인과 출고 승인","at":"2026-06-15T09:00:00+09:00"}],
+      "shipAt":"2026-06-15T14:00:00+09:00","deliveredAt":"2026-06-16T11:20:00+09:00","deliveredQty":1200,"receipt":"DEMO-POD-001",
+      "closedAt":"2026-06-17T16:00:00+09:00","costs":{"replacement":3600000,"freight":600000,"disposal":300000,"compensation":500000},
+      "lesson":"한 곳에서 전량 확보하고 합격 배치와 상차 시간을 먼저 확인하자 변경 납기 안에 인수됐습니다."
+    },
+    {
+      "id":"DEMO-HIST-002","title":"두 창고 분할 출고로 두 번째 입고 지연","issue":"QUALITY_REPLACEMENT","product":"PL-02","mode":"SPLIT",
+      "quantity":2000,"customer":"시험 고객 나","from":"데모 제조사 F1·인천 물류센터","to":"시험 고객 나 물류센터",
+      "originalPromise":"2026-06-19T12:00:00+09:00","amendedPromise":"2026-06-22T12:00:00+09:00",
+      "approvals":[{"role":"품질위원회","decision":"회수 착수 승인","at":"2026-06-18T10:30:00+09:00"},{"role":"영업","decision":"고객 분할 입고 동의 기록","at":"2026-06-18T15:00:00+09:00"},{"role":"품질·물류","decision":"두 곳의 대체 배치 합격 확인과 출고 승인","at":"2026-06-19T09:00:00+09:00"}],
+      "shipAt":"2026-06-19T14:00:00+09:00","deliveredAt":"2026-06-22T16:10:00+09:00","deliveredQty":2000,"receipt":"DEMO-POD-002",
+      "closedAt":"2026-06-24T16:00:00+09:00","costs":{"replacement":6000000,"freight":770000,"disposal":410000,"compensation":1200000},
+      "lesson":"1차 1,800개는 정시 인수됐지만 두 번째 차량의 입고 예약이 어긋나 200개가 4시간 10분 늦었습니다."
+    },
+    {
+      "id":"DEMO-HIST-003","title":"합격 배치 증빙 부족으로 출고 반려","issue":"QUALITY_REPLACEMENT","product":"PL-02","mode":"HOLD",
+      "quantity":1500,"customer":"시험 고객 다","from":"데모 제조사 F1 창고","to":"시험 고객 다 물류센터",
+      "originalPromise":"2026-06-26T12:00:00+09:00","amendedPromise":null,
+      "approvals":[{"role":"품질위원회","decision":"회수 착수 승인","at":"2026-06-25T09:00:00+09:00"},{"role":"품질·물류","decision":"합격 배치 미확인으로 대체 출고 반려","at":"2026-06-25T14:00:00+09:00"},{"role":"영업","decision":"고객과 해당 대체 주문 취소 확인","at":"2026-06-26T15:00:00+09:00"}],
+      "shipAt":null,"deliveredAt":null,"deliveredQty":0,"receipt":null,
+      "closedAt":"2026-06-26T16:00:00+09:00","costs":{"replacement":0,"freight":0,"disposal":280000,"compensation":450000},
+      "lesson":"실물 재고가 있어도 출고 가능한 합격 배치가 없으면 출고를 보류하고 고객과 납기를 다시 협의합니다."
+    }
+  ]
+}

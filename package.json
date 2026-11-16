@@ -1,0 +1,27 @@
+{
+  "name": "aurora-quality-recovery",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "vite build web --outDir ../dist --emptyOutDir",
+    "db:setup": "node server/setup.mjs",
+    "start": "node server/main.mjs",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node --env-file-if-exists=.env scripts/demo.mjs",
+    "demo:accounts": "node scripts/demo.mjs --accounts",
+    "test:demo": "node --test test/demo-flow.integration.mjs"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "pg": "^8.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

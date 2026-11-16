@@ -1,0 +1,73 @@
+[
+  {
+    "id": "N1",
+    "title": "생산 기록 · 원료 입고일보다 먼저 생산",
+    "detail": "데모 제조사 F1의 PL-02 생산 기록을 감사하다가 2026년 6월 3일 생산분에 6월 4일 입고, 6월 5일 검사된 원료 DEMO-LOT-03이 연결된 것을 발견했습니다. 고객 출하 기록은 있으나 확정 불량은 0개입니다. 품질위원회가 원료 투입·계량 기록의 대사를 결정합니다.",
+    "batch": "DEMO-BATCH-03",
+    "focus": "material"
+  },
+  {
+    "id": "N2",
+    "title": "품질 사고 · 출하 기록이 있는 검사 보류 배치",
+    "detail": "데모 제조사 F1이 2026년 3월 16일 생산한 PL-02 배치의 검사 상태는 보류지만 3월 20~31일에 다섯 고객에게 출하한 기록이 있습니다. 품질 운영이 확정 불량과 고객별 출하 범위를 다시 확인합니다. 이번 시연의 의결 대상은 데모 리테일 A의 3월 25일 출하분입니다.",
+    "batch": "DEMO-BATCH-02",
+    "focus": "quality-hold"
+  },
+  {
+    "id": "N3",
+    "title": "납품 사고 · 고객 인수증과 출하 수량 차이",
+    "detail": "데모 제조사 F1에서 데모 리테일 B 물류센터로 PL-02 1,200개를 출하했습니다. 전산 입고와 달리 고객이 전달한 인수증에는 1,180개가 적혀 있습니다. 규격 이탈 132개 확인 후 품질위원회가 회수 대상 수량을 검토합니다.",
+    "incident": {
+      "batch": "DEMO-PL02-INBOUND",
+      "shipmentId": "DEMO-SBL-INBOUND",
+      "customerId": "DEMO-C-INBOUND",
+      "customer": "데모 리테일 B",
+      "shippedDaysAgo": 7,
+      "shipped": 1200,
+      "sold": 0,
+      "confirmed": 132,
+      "replacement": 1200,
+      "report": "고객 인수증에 1,180개가 기재돼 출하 기록 1,200개와 20개 차이가 납니다.",
+      "deliveryNote": "전산에는 1,200개 입고로 기록돼 있습니다. 고객의 인수증과 수량을 대조합니다.",
+      "investigation": "고객 인수 수량이 확인될 때까지 고객사 잔량은 전산 기준입니다.",
+      "requiresTrace": true
+    }
+  },
+  {
+    "id": "N4",
+    "title": "판매 사고 · 매장 판매분 용기 누액 신고",
+    "detail": "데모 제조사 F1에서 데모 리테일 C로 납품한 PL-02 판매분에서 용기 누액이 신고됐습니다. 1,600개 중 960개가 판매됐고 640개가 남았습니다. 고객사 재고의 위치별 격리 회신과 구매자 안내, 회수품 인수를 각각 대조합니다.",
+    "incident": {
+      "batch": "DEMO-PL02-LEAK",
+      "shipmentId": "DEMO-SBL-LEAK",
+      "customerId": "DEMO-C-LEAK",
+      "customer": "데모 리테일 C",
+      "shippedDaysAgo": 14,
+      "shipped": 1600,
+      "sold": 960,
+      "confirmed": 176,
+      "replacement": 1000,
+      "report": "매장에서 구매한 제품의 용기 틈으로 내용물이 샌다는 신고가 접수됐습니다.",
+      "investigation": "누액 원인과 영향 범위를 조사 중입니다."
+    }
+  },
+  {
+    "id": "N5",
+    "title": "재공급 문제 · 김포 대체품 보류와 분할 납품",
+    "detail": "데모 제조사 F1에서 데모 리테일 D에 보낸 PL-02에서 규격 이탈 253개가 확인됐습니다. 대체품 2,000개가 필요하지만 김포 물류센터의 단독 출고 후보도 검사 보류입니다. 생산·공급망은 F1과 인천을 합친 대안을 검토하고, 영업은 고객과 도착일을 협의합니다.",
+    "incident": {
+      "batch": "DEMO-PL02-RESUPPLY",
+      "shipmentId": "DEMO-SBL-RESUPPLY",
+      "customerId": "DEMO-C-RESUPPLY",
+      "customer": "데모 리테일 D",
+      "shippedDaysAgo": 10,
+      "shipped": 2300,
+      "sold": 1300,
+      "confirmed": 253,
+      "replacement": 2000,
+      "report": "고객사가 품질 이상으로 대체품을 요청했습니다. 김포 보유분은 검사 보류로 묶였습니다.",
+      "investigation": "대체 공급은 합격 재고와 고객 도착일 동의가 필요합니다.",
+      "heldWarehouse": "GIMPO"
+    }
+  }
+]
